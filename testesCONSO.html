@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste Soft House</title>
+    <script src="script/jquery-3.4.1.js"></script>
+    <script src="script/testes.js"></script>
+    <script>
+        //pegar valor da data / hora atual
+        var inicio = new Date().getTime();
+
+        // Executa a função de insert em um certo número de vezes
+        for (var i = 0; i < 10000; i++) {
+            cadCon();
+        }
+
+        var fim = new Date().getTime();
+
+        // Calcular o tempo decorrido
+        var tempo = (fim - inicio) / 1000;
+    </script>
+    <script>
+        function EscreveNaDiv() {
+            var Div = document.getElementById("cadcon");
+            Div.innerText = tempo;
+        };
+    </script>
+</head>
+<body>
+    <h2>Tempo decorrido para inserir 10 registros: </h2>
+    <div id="ok"></div>
+    <div id="cadcon">
+        <h2><script>EscreveNaDiv();</script></h2>
+    </div>
+</body>
+</html>

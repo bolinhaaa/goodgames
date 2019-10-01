@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="script/style.css" >
+    <title>Cadastro de Video Games</title>
+</head>
+<body>
+	<div class="content">
+		<div class="col4">
+			<img src="imagens/logo3.png" width="100%">
+		</div>
+		<div class="col2">
+			<span class="logo-titulo"> Good Games </span>
+		</br>
+			<span class="logo-desc"> Jogos - Consoles - Acessórios - Dicas </span>
+		</div>
+		<div class="col4">
+			<a href="#" onclick="showModal('nletter')">
+			<img src="imagens/newsletter.png" width="100%">
+			</a>
+		</div>
+		<div class="col1">
+			<nav class="menu">
+				<ul>
+					<li><a href="index.html"> Home </a></li>
+					<li><a href="quemSomos.html"> Quem somos </a></li>
+					<li><a href="produtos.html"> Produtos </a></li>
+					<li><a href="curiosidades.html"> Curiosidades </a></li>
+					<li><a href="contato.html"> Contato </a></li>
+				</ul>
+            </nav>
+            
+            <div class="formulario">
+                <form method="POST" action="script/cadConso.php">
+                    <label for="titulo" class="lblTitulo">Título Do Console</label>
+                    <input type="text" id="titulo" name="titulo" maxlength="30" placeholder="Digite o Nome do Video Game" required /> <br />
+                    <br />
+                    <label for="tipo" class="lblTitulo">Tipo de Midia</label>
+                    <input type="text" id="tipo" name="tipo" maxlength="30" placeholder="Digite o Resumo do Jogo" required /> <br />
+                    <br />
+                    <label for="fabricante" class="lblTitulo">Fabricante do Video Game</label>
+                    <input type="text" id="fabricante" name="fabricante" maxlength="30" placeholder="Digite o Fabricante do Console" required /> <br />
+                    <br />
+                    <input type="submit" class="btnEnviar" id="enviar" name="enviar" value="Cadastrar" class="bt-enviar" />
+                    <input type="reset" class="btnCancelar" id="limpar" name="limpar" value="Limpar Campos" class="bt-cancelar" />
+                    
+                </form>
+                </div>
+        </div>
+        
+</body>
+</html>
